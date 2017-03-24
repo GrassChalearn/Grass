@@ -1,9 +1,5 @@
 from sklearn.base import BaseEstimator
-from sklearn.tree import DecisionTreeRegressor
-#from sklearn.naive_bayes import GaussianNB
-#from sklearn.neighbors import KNeighborsRegressor
-#from sklearn.ensemble import BaggingRegressor
-#from sklearn.ensemble import AdaBoostRegressor
+from sklearn.ensemble import BaggingRegressor
 import pickle
 
 
@@ -12,7 +8,7 @@ class Regressor(BaseEstimator):
         pass
 
     def fit(self, X, y):
-        self.clf = DecisionTreeRegressor()
+        self.clf = BaggingRegressor()
         self.clf.fit(X, y)
 
     def predict(self, X):
