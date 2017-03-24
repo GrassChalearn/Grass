@@ -12,6 +12,7 @@ from data_manager import DataManager # The class provided by binome 1
 # Note: if zDataManager is not ready, use the mother class DataManager
 from sklearn.decomposition import PCA
 
+
 class Preprocessor(BaseEstimator):
     def __init__(self):
         self.transformer = PCA(n_components=2)
@@ -28,13 +29,13 @@ class Preprocessor(BaseEstimator):
 if __name__=="__main__":
     # We can use this to run this file as a script and test the Preprocessor
     if len(argv)==1: # Use the default input and output directories if no arguments are provided
-        input_dir = "../public_data"
+        input_dir = "/home/swann.raynal/Bureau/MiniProjet/StartingKit/public_data/"
         output_dir = "../res"
     else:
         input_dir = argv[1]
         output_dir = argv[2];
     
-    basename = 'data'
+    basename = 'bikes'
     D = DataManager(basename, input_dir) # Load data
     print("*** Original data ***")
     print D
