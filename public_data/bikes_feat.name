@@ -1,0 +1,11 @@
+Moment_of_the_day
+station_id
+date_(m/d/y)
+average_duration_(s)
+season
+temperature_(F)
+humidity
+visibility
+wind
+cloud cover
+precipitation_(mm)
