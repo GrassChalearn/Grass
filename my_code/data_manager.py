@@ -57,7 +57,7 @@ class DataManager:
 		'''Constructor'''
 		self.use_pickle = False # Turn this to true to save data as pickle (inefficient)
 		self.basename = basename
-   		if basename in input_dir or os.path.isfile(os.path.join(input_dir, basename + '_train.data')) :
+       	if basename in input_dir or os.path.isfile(os.path.join(input_dir, basename + '_train.data')):
 			self.input_dir = input_dir 
    		else:
 			self.input_dir =  os.path.join (input_dir , basename ) 

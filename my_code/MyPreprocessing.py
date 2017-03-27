@@ -14,6 +14,10 @@ from sklearn.decomposition import PCA
 
 
 class Preprocessor(BaseEstimator):
+      def suppr():
+         data=data[:,0]
+         return data
+   
     def __init__(self):
         self.transformer = PCA(n_components=2)
 
@@ -29,7 +33,7 @@ class Preprocessor(BaseEstimator):
 if __name__=="__main__":
     # We can use this to run this file as a script and test the Preprocessor
     if len(argv)==1: # Use the default input and output directories if no arguments are provided
-        input_dir = "/home/swann.raynal/Bureau/MiniProjet/StartingKit/public_data/"
+        input_dir = "../public_data/"
         output_dir = "../res"
     else:
         input_dir = argv[1]
@@ -38,7 +42,7 @@ if __name__=="__main__":
     basename = 'bikes'
     D = DataManager(basename, input_dir) # Load data
     print("*** Original data ***")
-    print D
+    print (D)
     
     Prepro = Preprocessor()
  
@@ -49,4 +53,4 @@ if __name__=="__main__":
   
     # Here show something that proves that the preprocessing worked fine
     print("*** Transformed data ***")
-print D 
+    print (D)
