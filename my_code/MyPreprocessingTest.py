@@ -1,12 +1,20 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed Mar 29 23:42:18 2017
+
+@author: rami1
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Fri Mar 24 10:13:27 2017
 
 @author: swann.raynal
 """
-
+import sys
+sys.path.append("../sample_code/")
 from data_manager import DataManager
-from Processing1 import Preprocessor
+from MyPreprocessing import Preprocessor
 input_dir = "../public_data"
 output_dir = "../res"
 
