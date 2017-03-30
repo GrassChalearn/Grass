@@ -7,9 +7,8 @@ Created on Fri Mar  3 08:58:43 2017
 
 
 from sys import argv
-#from sklearn.base import BaseEstimator
-from data_manager import DataManager # The class provided by binome 1
-# Note: if zDataManager is not ready, use the mother class DataManager
+from sklearn.base import BaseEstimator
+from data_manager import DataManager
 from sklearn.decomposition import PCA
 
 
