@@ -28,7 +28,7 @@ class Preprocessor(BaseEstimator):
         
         
     def suppr(self, X):
-        moment=X[:,0]
+        moment=X[:,0] 
         station=X[:,1]
         date=X[:,2]
         temperature=X[:,5]
@@ -36,9 +36,9 @@ class Preprocessor(BaseEstimator):
         humidite=X[:,6] 
         nuage=X[:,9]
         precipitation=X[:,10]
-        pca=[humidite, nuage, precipitation]
+        pca=[humidite, nuage, precipitation] #combinaison des variables très corrélées
         pro = Preprocesor()
-        Y=[moment, station, date, temperature, vent, pro.fit_transform(pca)]
+        Y=[moment, station, date, temperature, vent, pro.fit_transform(pca)] #Nouveau tableau ne contenant que les variables utiles
         return Y
         
    
