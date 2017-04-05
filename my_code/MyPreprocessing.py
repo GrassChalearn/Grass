@@ -47,8 +47,7 @@ class Preprocessor(BaseEstimator):
         precipitation=X[:,10]
         meteo=[humidite, nuage, precipitation]
         pca=Preprocessor()
-        pca.transform(meteo)
-        
+        meteo=pca.transform(meteo)
         Y=[moment, station, date, temperature, vent, meteo]
         return Y
         
